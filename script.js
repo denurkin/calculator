@@ -1,25 +1,18 @@
 'use strict';
 // дз 3 день
 let money = prompt('Ваш месячный доход?');
-money;
 console.log(money);
 let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-addExpenses;
 console.log(addExpenses);
 let deposit = confirm('Есть ли у вас депозит в банке?');
-deposit;
 console.log(deposit);
 let expenses1 = prompt('Введите обязательную статью расходов?');
-expenses1;
 console.log(expenses1);
 let expenses2 = prompt('Введите обязательную статью расходов?');
-expenses2;
 console.log(expenses2);
 let amount1 = prompt('Во сколько это обойдется?');
-amount1;
 console.log(amount1);
 let amount2 = prompt('Во сколько это обойдется?');
-amount2;
 console.log(amount2);
 let mission = 500000;
 let budgetMonth = money - amount1 - amount2;
