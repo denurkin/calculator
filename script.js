@@ -26,7 +26,6 @@ mission = 500000;
 let budgetMonth = money - amount1 - amount2;
 console.log (budgetMonth);
 console.log (Math.ceil(mission / budgetMonth));
-budgetDay  = money / 30;
 if (budgetDay > 1200){
 console.log ("У вас высокий уровень дохода");
 } else if (budgetDay<=1200 && budgetDay>600){
