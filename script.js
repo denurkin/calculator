@@ -1,10 +1,18 @@
 'use strict';
+let money = 100000;
+const income = 'фриланс';
+let addExpenses = 'Курсы Отпуск Проездной';
+let deposit = true;
+let mission = 500000;
+let period = 8;
+let budgetDay  = money / 30;
+console.log (budgetDay);
 // дз 3 день
-let money = prompt('Ваш месячный доход?');
+money = prompt('Ваш месячный доход?');
 console.log(money);
-let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
 console.log(addExpenses);
-let deposit = confirm('Есть ли у вас депозит в банке?');
+deposit = confirm('Есть ли у вас депозит в банке?');
 console.log(deposit);
 let expenses1 = prompt('Введите обязательную статью расходов?');
 console.log(expenses1);
@@ -14,11 +22,11 @@ let expenses2 = prompt('Введите обязательную статью р�
 console.log(expenses2);
 let amount2 = prompt('Во сколько это обойдется?');
 console.log(amount2);
-let mission = 500000;
+mission = 500000;
 let budgetMonth = money - amount1 - amount2;
 console.log (budgetMonth);
 console.log (Math.ceil(mission / budgetMonth));
-let budgetDay  = money / 30;
+budgetDay  = money / 30;
 if (budgetDay > 1200){
 console.log ("У вас высокий уровень дохода");
 } else if (budgetDay<=1200 && budgetDay>600){
