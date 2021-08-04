@@ -1,18 +1,19 @@
 'use strict';
 //Объявление переменных
 
-let money = prompt('Ваш месячный доход?'),
+let money = +prompt('Ваш месячный доход?'),
 addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
 deposit = confirm('Есть ли у вас депозит в банке?'),
 income = 'фриланс',
 expenses1 = prompt('Введите обязательную статью расходов?'),
-amount1 = prompt('Во сколько это обойдется?'),
+amount1 = +prompt('Во сколько это обойдется?'),
 expenses2 = prompt('Введите обязательную статью расходов?'),
-amount2 = prompt('Во сколько это обойдется?'),
+amount2 = +prompt('Во сколько это обойдется?'),
 mission = 500000,
 period = 8,
 accumulatedMonth = getAccumulatedMonth(),
 budgetDay =  Math.ceil(accumulatedMonth / 30);
+
 
 // вывод в консоль
 console.log(budgetDay);
@@ -36,9 +37,6 @@ showTypeOf(period);
 showTypeOf(accumulatedMonth);
 showTypeOf(budgetDay);
 
-// изменение типа данных на числа
-amount1=Number(amount1);
-amount2=Number(amount2);
 
 //условная конструкция
 if (budgetDay > 1200){
