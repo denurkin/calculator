@@ -27,9 +27,9 @@ let getExpensesMonth = function() {
 
     for (let i = 0; i < 2; i++) {
 
-        if (i===0) {
+        if (i === 0) {
             expenses1 = prompt('Введите обязательную статью расходов?');
-        } else if (i===1) {
+        } else if (i === 1) {
             expenses2 = prompt('Введите обязательную статью расходов?');
         };
 
@@ -72,9 +72,9 @@ showTypeOf(budgetDay);
 //условная конструкция показывающая уровень дохода
 if (budgetDay > 1200) {
 console.log ("У вас высокий уровень дохода");
-} else if (budgetDay<=1200 && budgetDay>600) {
+} else if (budgetDay <= 1200 && budgetDay > 600) {
 console.log ("У вас средний уровень дохода");
-} else if (budgetDay<=600 && budgetDay>0) {
+} else if (budgetDay <= 600 && budgetDay > 0) {
 console.log ("К сожалению у вас уровень дохода ниже среднего");
 } else {
     console.log ("Что то пошло не так");
@@ -93,7 +93,7 @@ console.log ("К сожалению у вас уровень дохода ниж
 
     console.log(getTargetMonth());
 
-    if (getTargetMonth()>=0) {
+    if (getTargetMonth() >= 0) {
         console.log ('Цель будет достигнута');
     } else {
      console.log ('Цель не будет достигнута'); 
