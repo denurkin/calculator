@@ -1,15 +1,49 @@
 'use strict';
-//Объявление переменных
+let isNumber = function(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+};
 
-let money = +prompt('Ваш месячный доход?'),
-addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
+let money;
+
+let start = function() {
+    do {
+        money = prompt('Ваш месячный доход?'); 
+    } 
+    while (!isNumber(money));
+};
+
+start();
+
+let addExpenses = prompt('Перечислите возможные расходы' +
+' за рассчитываемый период через запятую'),
 deposit = confirm('Есть ли у вас депозит в банке?'),
 income = 'фриланс',
-expenses1 = prompt('Введите обязательную статью расходов?'),
-amount1 = +prompt('Во сколько это обойдется?'),
-expenses2 = prompt('Введите обязательную статью расходов?'),
-amount2 = +prompt('Во сколько это обойдется?'),
-mission = 500000,
+expenses1,
+expenses2;
+
+
+let getExpensesMonth = function() {
+    let sum = 0;
+
+    for (let i = 0; i < 2; i++) {
+
+        if (i===0) {
+            expenses1 = prompt('Введите обязательную статью расходов?');
+        } else if (i===1) {
+            expenses2 = prompt('Введите обязательную статью расходов?');
+        };
+
+        do {
+            sum = prompt('Во сколько это обойдется?');
+        }
+        while (!isNumber(sum));
+    }
+    console.log(sum);
+    return sum
+};
+ 
+let exprensesAmount = getExpensesMonth();
+let mission = 500000,
 period = 8,
 accumulatedMonth = getAccumulatedMonth(),
 budgetDay =  Math.ceil(accumulatedMonth / 30);
@@ -19,7 +53,7 @@ budgetDay =  Math.ceil(accumulatedMonth / 30);
 console.log(budgetDay);
 console.log (addExpenses.toLowerCase().split(" "));
 
-// объявление функции и вывод типа данных
+// функция которая показывает тип данных
 let showTypeOf = function(data) {
 console.log (data, typeof(data));
 };
@@ -28,40 +62,41 @@ showTypeOf(money);
 showTypeOf(addExpenses);
 showTypeOf(deposit);
 showTypeOf(income);
-showTypeOf(expenses1);
-showTypeOf(amount1);
-showTypeOf(expenses2);
-showTypeOf(amount2);
 showTypeOf(mission);
 showTypeOf(period);
 showTypeOf(accumulatedMonth);
 showTypeOf(budgetDay);
 
 
-//условная конструкция
-if (budgetDay > 1200){
+
+//условная конструкция показывающая уровень дохода
+if (budgetDay > 1200) {
 console.log ("У вас высокий уровень дохода");
-} else if (budgetDay<=1200 && budgetDay>600){
+} else if (budgetDay<=1200 && budgetDay>600) {
 console.log ("У вас средний уровень дохода");
-} else if (budgetDay<=600 && budgetDay>0){
+} else if (budgetDay<=600 && budgetDay>0) {
 console.log ("К сожалению у вас уровень дохода ниже среднего");
 } else {
     console.log ("Что то пошло не так");
     } ;
     
-    //объявление функций и вывод их в консоль
-    function getExpensesMonth(){
-        return amount1 + amount2;
-    } ;
-    console.log(getExpensesMonth());
 
-
-    function getAccumulatedMonth(){
-        return money - amount1 - amount2;
+    //функция которая показывет остаток с месячного дохода
+    function getAccumulatedMonth() {
+        return money - exprensesAmount;
     } ;
 
-
-    function getTargetMonth(){
-       return Math.ceil(mission / accumulatedMonth)
+    //функция которая показывает за сколько месяцев достигнем цели
+    function getTargetMonth() {
+       return Math.ceil(mission / accumulatedMonth);
     };
+
     console.log(getTargetMonth());
+
+    if (getTargetMonth()>=0) {
+        console.log ('Цель будет достигнута');
+    } else {
+     console.log ('Цель не будет достигнута'); 
+    };
+
+
