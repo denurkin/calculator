@@ -146,3 +146,46 @@ console.log("Наша программа включает в себя данны
 for (let key in appData) {
     console.log(key , appData[key]);
 };
+
+let calculate = document.getElementById('start');
+console.log(calculate);
+let plus1 = document.getElementsByTagName('button')[0];
+let plus2 = document.getElementsByTagName('button')[1];
+console.log(plus1, plus2);
+let checkbox = document.querySelector('#deposit-check');
+console.log(checkbox);
+let inputFields1 = document.querySelectorAll('.additional_income-item')[0];
+let inputFields2 = document.querySelectorAll('.additional_income-item')[1];
+console.log(inputFields1, inputFields2);
+
+let resultBudgetMonth= document.getElementsByClassName('result-total budget_month-value');
+let resultBudgetDay = document.getElementsByClassName('result-total budget_day-value');
+let resultExpensesMonth= document.getElementsByClassName('result-total expenses_month-value');
+let resultAdditionalIncome = document.getElementsByClassName('result-total additional_income-value');
+let resultAdditionalExpenses = document.getElementsByClassName('result-total additional_expenses-value');
+let resultIncomePeriod = document.getElementsByClassName('result-total income_period-value');
+let resultTargetMonth = document.getElementsByClassName('result-total target_month-value');
+console.log(resultBudgetMonth, resultBudgetDay, resultExpensesMonth, resultAdditionalIncome, resultAdditionalExpenses, resultIncomePeriod, resultTargetMonth);
+
+let salaryAmount = document.querySelector('.salary-amount');
+let incomeTitle = document.querySelector('.income-title');
+let incomeAmount = document.querySelector('.income-amount');
+let additionalIncomeItem1 = document.querySelector('.additional_income-item')[0];
+let additionalIncomeItem2 = document.querySelector('.additional_income-item')[1];
+let expensesTitle = document.querySelector('.expenses-title');
+let expensesAmount = document.querySelector('.expenses-amount');
+let additionalExpensesItem = document.querySelector('.additional_expenses-item');
+let depositCheck = document.querySelector('.deposit-check');
+let depositAmount = document.querySelector('.deposit-amount');
+let depositPercent = document.querySelector('.deposit-percent');
+let targetAmount = document.querySelector('.target-amount');
+let periodSelect = document.querySelector('.period-select');
+
+
+console.log(salaryAmount, incomeTitle, incomeAmount, additionalIncomeItem1, additionalIncomeItem2, expensesTitle);
+console.log(expensesAmount, additionalExpensesItem, depositCheck, depositAmount, depositPercent, targetAmount, periodSelect);
+
+
+
+
+
