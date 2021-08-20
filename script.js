@@ -27,7 +27,7 @@ let appData = {
     moneyDeposit: 0,
     mission: 100000,
     period: 3,
-    budget: money,
+    budget: +money,
     budgetDay: 0,
     budgetMonth: 0,
     expensesMonth: 0,
@@ -50,7 +50,7 @@ let appData = {
             )
                 
 
-            appData.income[itemIncome] = cashIncome;
+            appData.income[itemIncome] = +cashIncome;
         }
 
         let addExpenses = prompt(
@@ -81,7 +81,7 @@ let appData = {
        } while (
             !isNumber(answer)
        )
-            this.expenses[question] = answer;
+            this.expenses[question] = +answer;
         }
     },
 
