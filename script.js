@@ -75,7 +75,12 @@ let appData = {
                 isString(question)
            )
 
-            let answer = +prompt("Во сколько это обойдется?");
+           let answer
+           do {
+            answer = prompt("Во сколько это обойдется?");
+       } while (
+            !isNumber(answer)
+       )
             this.expenses[question] = answer;
         }
     },
