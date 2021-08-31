@@ -78,7 +78,7 @@ let appData = {
         targetMonthValue.value = Math.ceil(appData.getTargetMonth())
         incomePeriodValue.value = appData.calcPeriod();
 
-        let changeNumber = function(event) {
+        let changeNumber = function() {
             incomePeriodValue.value = appData.calcPeriod();
         };
         periodSelect.addEventListener('input', changeNumber);
