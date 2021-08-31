@@ -79,14 +79,7 @@ let appData = {
         incomePeriodValue.value = appData.calcPeriod();
 
         let changeNumber = function(event) {
-            periodSelect.removeEventListener('input', changeNumber);
-
-    
-            if (start.disabled) {
-                return periodSelect.addEventListener('input', changeNumber);
-            }
-    
-            appData.start();
+            incomePeriodValue.value = appData.calcPeriod();
         };
         periodSelect.addEventListener('input', changeNumber);
 
@@ -209,7 +202,6 @@ let appData = {
 };
 
 let changeNumber = function(event) {
-    console.log(event);
     periodAmount.textContent = event.target.value;
     };
 periodSelect.addEventListener('input', changeNumber);
