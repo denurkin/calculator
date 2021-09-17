@@ -82,6 +82,12 @@ let appData = {
             }
         })
 
+        expensesPlus.style.display = 'block';
+        incomePlus.style.display = 'block';
+
+        expensesPlus.disabled = false;
+        incomePlus.disabled = false;
+
         
         resetButton.style.display = 'none';
         start.style.display = 'block';
@@ -142,6 +148,7 @@ let appData = {
             if(expensesItems.length ===3) {
                 expensesPlus.style.display = 'none';
             }
+            
     },
     getExpenses: function() {
         expensesItems.forEach(function(item){
@@ -195,6 +202,8 @@ let appData = {
         inputTexts.forEach((inputText) => {
             inputText.disabled = true;
         });
+        expensesPlus.disabled = true;
+        incomePlus.disabled = true;
     },
     //функция которая показывает расходы
     getExpensesMonth: function () {
